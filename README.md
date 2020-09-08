@@ -133,4 +133,4 @@ npm run lint -- --fix
 
 [![cms110/skeleton-admin](https://gitee.com/cms110/skeleton-admin/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/cms110/skeleton-admin)
 
-Copyright (c) 2020-present anziguoer
+Copyright (c) 2020-anziguoer
