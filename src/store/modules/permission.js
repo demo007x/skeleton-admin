@@ -1,10 +1,5 @@
-import {
-  constantRoutes
-} from '@/router'
-import {
-  menuLists,
-  generateMenusTree
-} from '@/api/menu'
+import { constantRoutes } from '@/router'
+import { menuLists, generateMenusTree } from '@/api/menu'
 
 /**
  * Use meta.role to determine if the current user has permission
