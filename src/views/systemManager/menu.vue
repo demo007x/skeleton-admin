@@ -225,46 +225,44 @@ export default {
     },
     createMenu() {
       this.$refs['menuForm'].validate((valid) => {
-          if (valid) {
-            createMenu(this.menuData).then(response => {
-              this.generateMenu()
-              this.$message({
-                message: '操作成功',
-                type: 'success'
-              })
-            }).catch(error => {
-              this.$message({
-                message: error.toString(),
-                type: 'error'
-              })
+        if (valid) {
+          createMenu(this.menuData).then(response => {
+            this.generateMenu()
+            this.$message({
+              message: '操作成功',
+              type: 'success'
             })
-          }
-        }
+          }).catch(error => {
+            this.$message({
+              message: error.toString(),
+              type: 'error'
+            })
+          })
+        }}
       )
     },
     updateData() {
       this.$refs['menuForm'].validate((valid) => {
-          if (valid) {
-            updateMenu(this.menuData).then(response => {
-              const { tree } = response.data
-              this.list = tree
-              this.menuData = Object.assign({}, defaultMenuData)
-              this.dialogStatus = 'create'
-              this.defaultMenuPid = []
-              this.$refs['menuForm'].resetFields()
-              this.generateMenu()
-              this.$message({
-                message: '操作成功',
-                type: 'success'
-              })
-            }).catch(error => {
-              this.$message({
-                message: error.toString(),
-                type: 'error'
-              })
+        if (valid) {
+          updateMenu(this.menuData).then(response => {
+            const { tree } = response.data
+            this.list = tree
+            this.menuData = Object.assign({}, defaultMenuData)
+            this.dialogStatus = 'create'
+            this.defaultMenuPid = []
+            this.$refs['menuForm'].resetFields()
+            this.generateMenu()
+            this.$message({
+              message: '操作成功',
+              type: 'success'
             })
-          }
-        }
+          }).catch(error => {
+            this.$message({
+              message: error.toString(),
+              type: 'error'
+            })
+          })
+        }}
       )
     },
     menuInfo() {
